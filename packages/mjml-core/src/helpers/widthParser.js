@@ -11,6 +11,25 @@ export default function widthParser(width, options = {}) {
   }
   const parser = unitParsers[widthUnit] || unitParsers.default
 
+  if (width.toString().includes("{{")) {
+    const last2 = width.slice(-2);
+    if (last2 !== "}}") {
+      if (last2 === "px") {
+        return {
+          parsedWidth: width.slice(0, -2),
+          unit: 'px'
+        }
+      }
+      return {
+        parsedWidth: width.slice(0, -1),
+        unit: '%'
+      }
+    }
+    return {
+      parsedWidth: width,
+      unit: 'px'
+    }
+  }
   return {
     parsedWidth: parser(width),
     unit: widthUnit || 'px',

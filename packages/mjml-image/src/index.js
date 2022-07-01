@@ -85,6 +85,17 @@ export default class MjImage extends BodyComponent {
   }
 
   getContentWidth() {
+    const w = this.getAttribute('width');
+    if (w && w.includes("{{")) {
+      const last2 = w.slice(-2);
+      if (last2 !== "}}") {
+        if (last2 === "px") {
+          return w.slice(0, -2)
+        }
+        return w.slice(0, -1)
+      }
+      return w;
+    }
     const width = this.getAttribute('width')
       ? parseInt(this.getAttribute('width'), 10)
       : Infinity
