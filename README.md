@@ -196,7 +196,7 @@ MJML wouldn't be as cool without its amazing community. Head over the [Community
 - [Cedric](https://github.com/kmcb777)
 - [Loeck](https://github.com/lohek)
 - [Robin](https://github.com/robink)
-- [Guillaume](https://github.com/GuillaumeBadi)
+- [Guillaume](https://github.com/)
 - [Meriadec](https://github.com/meriadec)
 - [Arnaud](https://github.com/arnaudbreton)
 - [HTeuMeuLeu](https://github.com/hteumeuleu)
